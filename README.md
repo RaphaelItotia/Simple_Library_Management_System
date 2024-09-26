@@ -78,7 +78,7 @@ The database for the Library Management System consists of three main tables:
   - Inserting Data: I inserted sample data into each table to facilitate testing and demonstration of functionalities.
 
 ```sql
-    INSERT INTO Books (BookID,Title,Author,Genre,PublishedYear)
+INSERT INTO Books (BookID,Title,Author,Genre,PublishedYear)
 VALUES (1, 'The River and the Source', 'Margaret A. Ogolla', 'Historical Fiction',1994),
 		(2, 'Dust','Yvonne Adhiambo Owuor','Literacy Fiction',2013),
 		(3,'Petals of Blood','Ngugi wa Thiongo','Political Fiction',1977),
