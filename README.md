@@ -75,7 +75,7 @@ The database for the Library Management System consists of three main tables:
 
 ## Implementation:
 
-  - Inserting Data: I inserted sample data into each table to facilitate testing and demonstration of functionalities.
+- Inserting Data: I inserted sample data into each table to facilitate testing and demonstration of functionalities.
 
 ```sql
 INSERT INTO Books (BookID,Title,Author,Genre,PublishedYear)
@@ -98,7 +98,9 @@ VALUES (1,1,2,'2023-12-06','2023-12-13'),
        (3,3,3,'2024-01-02','2024-01-12')
 ```
 
-  - Data Retrieval: I created various SQL queries to meet the project objectives
+----------
+
+- Data Retrieval: I created various SQL queries to meet the project objectives
     
    (i)  Find All Books Currently Loaned Out:
       
