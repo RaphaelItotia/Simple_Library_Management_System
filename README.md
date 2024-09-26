@@ -97,3 +97,49 @@ VALUES (1,1,2,'2023-12-06','2023-12-13'),
 		(2,5,1,'2023-11-24',NULL),
 		(3,3,3,'2024-01-02','2024-01-12')
 ```
+
+  - Data Retrieval: I created various SQL queries to meet the project objectives;
+    
+   1. Find All Books Currently Loaned Out:
+      
+```sql
+      SELECT Books.Title, Users.FullName, Loans.LoanDate
+FROM Loans
+JOIN Books ON Loans.BookID = Books.BookID
+JOIN Users ON Loans.UserID = Users.UserID
+WHERE ReturnDate IS NULL;
+```
+
+  2. List All Books by a Specific Author:
+     
+```sql
+SELECT Title
+FROM Books
+WHERE Author = 'Ngugi wa Thiongo';
+```
+
+  3. List of Users Who Have Borrowed a Book:
+
+```sql
+SELECT Users.FullName, Books.Title
+FROM Loans
+JOIN Users ON Loans.UserID = Users.UserID
+JOIN Books ON Loans.BookID = Books.BookID;
+```
+
+## Results:
+The SQL implementation provided a structured and efficient way to manage library data. 
+Key functionalities included:
+
+ - Tracking of currently loaned books.
+ - Reporting on book availability by author.
+ - Comprehensive user borrowing records.
+
+## Conclusion:
+The Library Management System demonstrates a solid understanding of SQL database design and implementation. The project effectively addresses the challenges faced by the library through organized data management. 
+
+## Future Work
+
+  - Implementing user authentication and role-based access control.
+  - Creating a web-based interface for easier access and management.
+  - Incorporating additional features for managing book reservations and fines.
