@@ -73,3 +73,27 @@ The database for the Library Management System consists of three main tables:
     );
     ```
 
+## Implementation:
+
+  - Inserting Data: I inserted sample data into each table to facilitate testing and demonstration of functionalities.
+
+```sql
+    INSERT INTO Books (BookID,Title,Author,Genre,PublishedYear)
+VALUES (1, 'The River and the Source', 'Margaret A. Ogolla', 'Historical Fiction',1994),
+		(2, 'Dust','Yvonne Adhiambo Owuor','Literacy Fiction',2013),
+		(3,'Petals of Blood','Ngugi wa Thiongo','Political Fiction',1977),
+		(4,'Unbowed: A Memoir','Wangari Maathai','Autobiography',2006),
+		(5,'Weep Not, Child','Ngugi wa Thiongo','Coming-of-Age Fiction',1964)
+
+INSERT INTO Users (UserID,FullName,Email,JoinDate)
+VALUES (1,'Cate Wanjiru','catewanji@gmail.com','2023-11-21'),
+		(2, 'Henry Kangethe','henry1k@gmail.com','2023-12-03'),
+		(3,'Hellen Mutinda','hellenmut1nda@gmail.com','2023-12-11'),
+		(4,'Gladys Mutio','gladysmut1o2@gmail.com','2024-01-02'),
+		(5,'Samuel Omondi','Samuel21Omo@gmail.com','2024-01-02')
+
+INSERT INTO Loans (LoanID,BookID,UserID,LoanDate,ReturnDate)
+VALUES (1,1,2,'2023-12-06','2023-12-13'),
+		(2,5,1,'2023-11-24',NULL),
+		(3,3,3,'2024-01-02','2024-01-12')
+```
