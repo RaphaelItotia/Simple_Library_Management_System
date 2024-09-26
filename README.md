@@ -138,7 +138,9 @@ Key functionalities included:
  - Comprehensive user borrowing records.
 
 ## Conclusion:
-The Library Management System demonstrates a solid understanding of SQL database design and implementation. The project effectively addresses the challenges faced by the library through organized data management. 
+The Library Management System demonstrates a solid understanding of SQL database design and implementation. 
+
+The project effectively addresses the challenges faced by the library through organized data management. 
 
 ## Future Work
 
