@@ -25,11 +25,11 @@ The database for the Library Management System consists of three main tables:
 
     ```sql
     CREATE TABLE Books (
-    BookID INT PRIMARY KEY,
-    Title VARCHAR(100),
-    Author VARCHAR(100),
-    Genre VARCHAR(50),
-    PublishedYear INT
+       BookID INT PRIMARY KEY,
+       Title VARCHAR(100),
+       Author VARCHAR(100),
+       Genre VARCHAR(50),
+       PublishedYear INT
     );
     ```
    
@@ -44,10 +44,10 @@ The database for the Library Management System consists of three main tables:
 
     ```sql
     CREATE TABLE Users (
-    UserID INT PRIMARY KEY,
-    FullName VARCHAR(100),
-    Email VARCHAR(100),
-    JoinDate DATE
+       UserID INT PRIMARY KEY,
+       FullName VARCHAR(100),
+       Email VARCHAR(100),
+       JoinDate DATE
     );
     ```
 
@@ -63,13 +63,13 @@ The database for the Library Management System consists of three main tables:
 
     ```sql
     CREATE TABLE Loans (
-    LoanID INT PRIMARY KEY,
-    BookID INT,
-    UserID INT,
-    LoanDate DATE,
-    ReturnDate DATE,
-    FOREIGN KEY (BookID) REFERENCES Books(BookID),
-    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+       LoanID INT PRIMARY KEY,
+       BookID INT,
+       UserID INT,
+       LoanDate DATE,
+       ReturnDate DATE,
+       FOREIGN KEY (BookID) REFERENCES Books(BookID),
+       FOREIGN KEY (UserID) REFERENCES Users(UserID)
     );
     ```
 
@@ -103,7 +103,7 @@ VALUES (1,1,2,'2023-12-06','2023-12-13'),
    1. Find All Books Currently Loaned Out:
       
 ```sql
-      SELECT Books.Title, Users.FullName, Loans.LoanDate
+SELECT Books.Title, Users.FullName, Loans.LoanDate
 FROM Loans
 JOIN Books ON Loans.BookID = Books.BookID
 JOIN Users ON Loans.UserID = Users.UserID
