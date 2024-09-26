@@ -17,11 +17,11 @@ The database for the Library Management System consists of three main tables:
 1. Books Table
 
   - Attributes:
-      - BookID (INT, Primary Key)
-      - Title (VARCHAR)
-      - Author (VARCHAR)
-      - Genre (VARCHAR)
-      - PublishedYear (INT)
+      - `BookID` (INT, Primary Key)
+      - `Title` (VARCHAR)
+      - `Author` (VARCHAR)
+      - `Genre` (VARCHAR)
+      - `PublishedYear` (INT)
 
     ```sql
     CREATE TABLE Books (
@@ -37,10 +37,10 @@ The database for the Library Management System consists of three main tables:
 2. Users Table
 
   - Attributes:
-      - UserID (INT, Primary Key)
-      - FullName (VARCHAR)
-      - Email (VARCHAR)
-      - JoinDate (DATE)
+      - `UserID` (INT, Primary Key)
+      - `FullName` (VARCHAR)
+      - `Email` (VARCHAR)
+      - `JoinDate` (DATE)
 
     ```sql
     CREATE TABLE Users (
@@ -55,11 +55,11 @@ The database for the Library Management System consists of three main tables:
 3. Loans Table
 
   - Attributes:
-      - LoanID (INT, Primary Key)
-      - BookID (INT, Foreign Key)
-      - UserID (INT, Foreign Key)
-      - LoanDate (DATE)
-      - ReturnDate (DATE)
+      - `LoanID` (INT, Primary Key)
+      - `BookID` (INT, Foreign Key)
+      - `UserID` (INT, Foreign Key)
+      - `LoanDate` (DATE)
+      - `ReturnDate` (DATE)
 
     ```sql
     CREATE TABLE Loans (
