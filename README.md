@@ -98,9 +98,9 @@ VALUES (1,1,2,'2023-12-06','2023-12-13'),
        (3,3,3,'2024-01-02','2024-01-12')
 ```
 
-  - Data Retrieval: I created various SQL queries to meet the project objectives;
+  - Data Retrieval: I created various SQL queries to meet the project objectives
     
-   1. Find All Books Currently Loaned Out:
+   (i)  Find All Books Currently Loaned Out:
       
 ```sql
 SELECT Books.Title, Users.FullName, Loans.LoanDate
@@ -110,7 +110,7 @@ JOIN Users ON Loans.UserID = Users.UserID
 WHERE ReturnDate IS NULL;
 ```
 
-  2. List All Books by a Specific Author:
+   (ii)  List All Books by a Specific Author:
      
 ```sql
 SELECT Title
@@ -118,7 +118,7 @@ FROM Books
 WHERE Author = 'Ngugi wa Thiongo';
 ```
 
-  3. List of Users Who Have Borrowed a Book:
+   (iii)  List of Users Who Have Borrowed a Book:
 
 ```sql
 SELECT Users.FullName, Books.Title
