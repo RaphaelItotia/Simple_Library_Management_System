@@ -23,15 +23,16 @@ The database for the Library Management System consists of three main tables:
       - Genre (VARCHAR)
       - PublishedYear (INT)
 
-```sql
-CREATE TABLE Books (
+    ```sql
+    CREATE TABLE Books (
     BookID INT PRIMARY KEY,
     Title VARCHAR(100),
     Author VARCHAR(100),
     Genre VARCHAR(50),
     PublishedYear INT
-);
-```
+    );
+    ```
+   
 
 2. Users Table
 
@@ -41,14 +42,15 @@ CREATE TABLE Books (
       - Email (VARCHAR)
       - JoinDate (DATE)
 
-```sql
-CREATE TABLE Users (
+    ```sql
+    CREATE TABLE Users (
     UserID INT PRIMARY KEY,
     FullName VARCHAR(100),
     Email VARCHAR(100),
     JoinDate DATE
-);
-```
+    );
+    ```
+
 
 3. Loans Table
 
@@ -59,8 +61,8 @@ CREATE TABLE Users (
       - LoanDate (DATE)
       - ReturnDate (DATE)
 
-```sql
-CREATE TABLE Loans (
+    ```sql
+    CREATE TABLE Loans (
     LoanID INT PRIMARY KEY,
     BookID INT,
     UserID INT,
@@ -68,5 +70,6 @@ CREATE TABLE Loans (
     ReturnDate DATE,
     FOREIGN KEY (BookID) REFERENCES Books(BookID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
-);
-```
+    );
+    ```
+
